@@ -1,15 +1,5 @@
 name: democds
 version: v1.0
-pipeline_hooks:
-- type: Scheduler
-  ref: "1539683729"
-  config:
-    cron: 0 0 * * *
-    payload: |-
-      {
-        "git.branch": "master"
-      }
-    timezone: UTC
 workflow:
   build:
     depends_on: 
